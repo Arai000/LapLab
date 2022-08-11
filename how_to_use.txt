@@ -51,3 +51,4 @@ XXX（ブランチ名）をYYY（ブランチ名）に合わせる（merge）
         （例：merge YYY's feature to XXX）
         その後、escキーを押して:wqと入力して保存
         mergeが完了したかgithubサイト上などで確認する
+    （mergeはgithubサイト上でpull request承認後にもできる）
