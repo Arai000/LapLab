@@ -44,3 +44,10 @@ ssh確認
     git checkout ブランチ名
 ブランチの作成
     git branch ブランチ名
+XXX（ブランチ名）をYYY（ブランチ名）に合わせる（merge）
+    git checkout XXX
+    git merge YYY
+        mergeする理由の入力を求められた場合、iキーを押して入力状態にした後、理由を簡潔に入力
+        （例：merge YYY's feature to XXX）
+        その後、escキーを押して:wqと入力して保存
+        mergeが完了したかgithubサイト上などで確認する
