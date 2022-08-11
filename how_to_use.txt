@@ -60,4 +60,5 @@ XXX（ブランチ名）をYYY（ブランチ名）に合わせる（merge）
         mergeが完了したかgithubサイト上などで確認する
     （mergeはgithubサイト上でpull request承認後にもできる）
 ブランチの削除
-    git branch -d ブランチ名
+    ローカルのブランチの削除：git branch -d ブランチ名
+    リモートのブランチの削除：git push origin --delete ブランチ名
