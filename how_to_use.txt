@@ -40,7 +40,22 @@ ssh確認
     git add .
     git commit -m “名前:ファイル内のどこを編集したのか変更内容を簡潔に”
     git push origin ブランチ名
+        リモート側に先に（他人からの）変更があったなどの理由でエラーが出た場合（conflict）
+        強制的にpushを行う場合：
+            git push --force origin ブランチ名
+        先にあった変更をローカルに反映させてからpushする場合：
+            git fetchで変更箇所をリモートから取得
+            取得された変更箇所をローカルに手作業で反映
+            再度「git push origin ブランチ名」を実行
 ブランチの移動
     git checkout ブランチ名
 ブランチの作成
     git branch ブランチ名
+XXX（ブランチ名）をYYY（ブランチ名）に合わせる（merge）
+    git checkout XXX
+    git merge YYY
+        mergeする理由の入力を求められた場合、iキーを押して入力状態にした後、理由を簡潔に入力
+        （例：merge YYY's feature to XXX）
+        その後、escキーを押して:wqと入力して保存
+        mergeが完了したかgithubサイト上などで確認する
+    （mergeはgithubサイト上でpull request承認後にもできる）
