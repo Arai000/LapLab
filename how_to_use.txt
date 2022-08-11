@@ -40,6 +40,13 @@ ssh確認
     git add .
     git commit -m “名前:ファイル内のどこを編集したのか変更内容を簡潔に”
     git push origin ブランチ名
+        リモート側に先に（他人からの）変更があったなどの理由でエラーが出た場合（conflict）
+        強制的にpushを行う場合：
+            git push --force origin ブランチ名
+        先にあった変更をローカルに反映させてからpushする場合：
+            git fetchで変更箇所をリモートから取得
+            取得された変更箇所をローカルに手作業で反映
+            再度「git push origin ブランチ名」を実行
 ブランチの移動
     git checkout ブランチ名
 ブランチの作成
