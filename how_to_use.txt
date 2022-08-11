@@ -1,0 +1,46 @@
+ssh確認
+    ssh -T git@github-dc.com
+        エラーが出た場合
+        ディレクトリを移動するが戻ってくるのが面倒なのでターミナルをもう一つ作成してそちらで以下を実行
+        cd
+        cd .ssh
+        ls
+            configが存在する場合
+            code config
+                command not found: codeと言われた場合
+                command+shift+Pを押す
+                コマンドパレット上にshell commandと打つ
+                「Shell Command: Install 'code' command in PATH command.」を選択
+                codeコマンドでターミナルからファイルをVS Code上に開けるようになる
+            configファイルを以下のように編集
+                Host github-dc.com
+                    HostName github.com
+                    IdentityFile ~/.ssh/github-dc
+                    User git
+            ただし、3行目の~/.ssh/以下は.sshフォルダにあるsshキーが格納されたファイル名にする（塩見さんの研修ではgithub-dc）
+        前のターミナルに戻り、再度実行
+リモートをローカルにコピー（clone）
+    Desktopなどに移動（ここに作業フォルダを作る）
+    mkdir LapLab
+    （このLapLabフォルダはgithubに上げないデータも格納する用）
+    cd LapLab
+    mkdir LapLab
+    （このLapLabフォルダはgithubに上げるデータを格納する用）
+    cd LapLab
+    git clone -b ブランチ名 git@github-dc.com:Arai000/LapLab .（最後の.を忘れるとフォルダ階層が余計に深くなる）
+初期設定
+    git init
+    git remote add origin git@github-dc.com:Arai000/LapLab
+        remote origin already existと言われた場合
+        git remote rm origin
+        再度実行
+ローカルをリモートに合わせる（pull）
+    git pull origin ブランチ名
+リモートをローカルに合わせる（push）
+    git add .
+    git commit -m “名前:ファイル内のどこを編集したのか変更内容を簡潔に”
+    git push origin ブランチ名
+ブランチの移動
+    git checkout ブランチ名
+ブランチの作成
+    git branch ブランチ名
