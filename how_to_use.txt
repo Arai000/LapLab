@@ -47,7 +47,7 @@ ssh確認
             git fetchで変更箇所をリモートから取得
             取得された変更箇所をローカルに手作業で反映
             再度「git push origin ブランチ名」を実行
-ブランチの移動
+ブランチの移動（checkout）
     git checkout ブランチ名
 ブランチの作成
     git branch ブランチ名
