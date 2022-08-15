@@ -1,4 +1,5 @@
 node_modules/
-.ssh
-.env
 .DS_Store
+.vscode/
+Library/
+Packages/
