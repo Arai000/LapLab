@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Hero : Move
 {
+    void Start()
+    {
+        init();
+    }
+
     void Update()
     {
         move(

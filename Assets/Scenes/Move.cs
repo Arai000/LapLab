@@ -6,7 +6,8 @@ public class Move : StoryFlag
 {
     public float speed = 4.0f;
 
-    public void move(bool up,bool down,bool right,bool left){
+    public void move(bool up,bool down,bool right,bool left)
+    {
         if(up){
             transform.position += transform.up * speed * Time.deltaTime;
         }
