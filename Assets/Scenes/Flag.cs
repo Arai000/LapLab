@@ -9,7 +9,7 @@ public class StoryFlag : MonoBehaviour
 
     public void init()
     {
-        talkBox = GameObject.Find("talk_box");
+        talkBox = GameObject.Find("talkBoxS");
         talkBox.GetComponent<Activate>().Deactive();
     }
 
