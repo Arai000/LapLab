@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Move : StoryFlag
 {
-    public float speed = 4.0f;
+    public float speed = 6.0f;
 
     public void move(bool up,bool down,bool right,bool left)
     {

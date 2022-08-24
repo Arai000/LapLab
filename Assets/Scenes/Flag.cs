@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoryFlag : MonoBehaviour
+public class StoryFlag : StandFlag
 {
     public GameObject talkBox;
     public int flag = 0;
@@ -16,12 +16,12 @@ public class StoryFlag : MonoBehaviour
     public void heroFlag()
     {
         Vector3 tmp = this.transform.position;
-        if(tmp.x>8 && tmp.y>8 && flag==0){
+        if(tmp.x < -5 && tmp.y > 4 && flag== 0){
             flag = 1;
             talkBox.GetComponent<Activate>().Active();
             Debug.Log("Flagが立った!");
         }
-        if(tmp.x<=8 || tmp.y<=8 && flag==1){
+        if(tmp.x >= -5 && tmp.y <= 4 && flag== 1){
             flag = 0;
         }
     }
